@@ -1,0 +1,38 @@
+{
+  "name": "cmc",
+  "displayName": "cmc",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cmc",
+        "aliases": [
+          "cmc",
+          "cmc"
+        ],
+        "extensions": [
+          "cmc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cmc",
+        "scopeName": "source.cmc",
+        "path": "./syntaxes/cmc.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.3",
+    "js-yaml": "^4.1.0"
+  }
+}
