@@ -1,6 +1,6 @@
 {
-  "name": "cmc",
-  "displayName": "cmc",
+  "name": "mcil",
+  "displayName": "mcil",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -12,22 +12,22 @@
   "contributes": {
     "languages": [
       {
-        "id": "cmc",
+        "id": "mcil",
         "aliases": [
-          "cmc",
-          "cmc"
+          "mcil",
+          "mcil"
         ],
         "extensions": [
-          "cmc"
+          "mcil"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "cmc",
-        "scopeName": "source.cmc",
-        "path": "./syntaxes/cmc.tmLanguage.json"
+        "language": "mcil",
+        "scopeName": "source.mcil",
+        "path": "./syntaxes/mcil.tmLanguage.json"
       }
     ]
   },

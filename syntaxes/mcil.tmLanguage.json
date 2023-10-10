@@ -1,9 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "cmc",
-  "scopeName": "source.cmc",
+  "name": "mcil",
+  "scopeName": "source.mcil",
   "fileTypes": [
-    "cmc"
+    "mcil"
   ],
   "patterns": [
     {
@@ -35,7 +35,7 @@
           "match": "\\b(set-logic|declare-sort|define-sort|declare-fun|define-fun|declare-const|define-const|declare-datatype|assert)\\b",
           "captures": {
             "1": {
-              "name": "keyword.other.cmc"
+              "name": "keyword.other.mcil"
             }
           }
         },
@@ -43,18 +43,18 @@
           "match": "\\b(define-system|check-system|declare-enum-sort)\\b",
           "captures": {
             "1": {
-              "name": "keyword.other.cmc"
+              "name": "keyword.other.mcil"
             }
           }
         },
         {
-          "comment": "CMC functions"
+          "comment": "mcil functions"
         },
         {
           "match": "\\b(Deadlock|OnlyChange)\\b",
           "captures": {
             "1": {
-              "name": "support.function.cmc"
+              "name": "support.function.mcil"
             }
           }
         },
@@ -65,7 +65,7 @@
           "match": "(\\b(true|false|and|or|ite|not)\\b)|((=>|=)\\s)",
           "captures": {
             "1": {
-              "name": "keyword.control.cmc"
+              "name": "keyword.control.mcil"
             }
           }
         },
@@ -76,7 +76,7 @@
           "match": "[[<=][>=]<>\\+\\-\\*/]\\s",
           "captures": {
             "1": {
-              "name": "keyword.control.cmc"
+              "name": "keyword.control.mcil"
             }
           }
         }
@@ -86,7 +86,7 @@
       "match": ":\\b([a-zA-Z~!@$%^&*_\\-+=<>.?/]|[a-zA-Z~!@$%^&*_\\-+=<>.?/][a-zA-Z0-9~!@$%^&*_\\-+=<>.?/]+)\\b",
       "captures": {
         "1": {
-          "name": "keyword.control.cmc"
+          "name": "keyword.control.mcil"
         }
       }
     },
@@ -96,7 +96,7 @@
           "match": "\\b([A-Z][a-zA-Z~!@$%^&*_\\-+=<>.?/]|[A-Z][a-zA-Z0-9~!@$%^&*_\\-+=<>.?/]*)\\b",
           "captures": {
             "1": {
-              "name": "support.type.cmc"
+              "name": "support.type.mcil"
             }
           }
         },
@@ -104,7 +104,7 @@
           "match": "\\|\\b([A-Z][a-zA-Z~!@$%^&*_\\-+=<>.?/]|[A-Z][a-zA-Z0-9~!@$%^&*_\\-+=<>.?/]*)\\b\\|",
           "captures": {
             "1": {
-              "name": "support.type.cmc"
+              "name": "support.type.mcil"
             }
           }
         }
@@ -138,26 +138,26 @@
           "match": "\\b([a-zA-Z~!@$%^&*_\\-+=<>.?/]|[a-zA-Z~!@$%^&*_\\-+=<>.?/][a-zA-Z0-9~!@$%^&*_\\-+=<>.?/]+)\\b",
           "captures": {
             "1": {
-              "name": "variable.other.cmc"
+              "name": "variable.other.mcil"
             }
           }
         },
         {
           "begin": "\\|",
           "end": "\\|",
-          "contentName": "variable.other.cmc"
+          "contentName": "variable.other.mcil"
         }
       ]
     },
     "comment": {
       "match": ";.*",
-      "name": "comment.cmc"
+      "name": "comment.mcil"
     },
     "decimal": {
       "match": "\\b(\\d+\\.\\d+)\\b",
       "captures": {
         "1": {
-          "name": "constant.numeric.cmc"
+          "name": "constant.numeric.mcil"
         }
       }
     },
@@ -165,7 +165,7 @@
       "match": "\\b(\\d+)\\b",
       "captures": {
         "1": {
-          "name": "constant.numeric.cmc"
+          "name": "constant.numeric.mcil"
         }
       }
     },
@@ -173,7 +173,7 @@
       "match": "\\s(#x\\h+)\\b",
       "captures": {
         "1": {
-          "name": "constant.numeric.cmc"
+          "name": "constant.numeric.mcil"
         }
       }
     },
@@ -181,18 +181,18 @@
       "match": "\\s(#b[01]+)\\b",
       "captures": {
         "1": {
-          "name": "constant.numeric.cmc"
+          "name": "constant.numeric.mcil"
         }
       }
     },
     "string": {
       "begin": "\"",
       "end": "\"",
-      "name": "string.quoted.double.cmc",
+      "name": "string.quoted.double.mcil",
       "patterns": [
         {
           "match": "\"\"",
-          "name": "constant.character.escape.cmc"
+          "name": "constant.character.escape.mcil"
         }
       ]
     },
@@ -200,7 +200,7 @@
       "match": "\\b(true|false)\\b",
       "captures": {
         "1": {
-          "name": "constant.language.cmc"
+          "name": "constant.language.mcil"
         }
       }
     }
