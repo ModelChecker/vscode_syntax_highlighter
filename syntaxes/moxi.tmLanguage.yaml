@@ -2,13 +2,13 @@
 # TextMate grammar guide: https://www.apeth.com/nonblog/stories/textmatebundle.html
 # VS Code syntax highlight guide: https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide
 # Use the command-line tool to convert the yaml grammar to json
-# npx js-yaml syntaxes/mcil.tmLanguage.yaml > syntaxes/mcil.tmLanguage.json
+# npx js-yaml syntaxes/moxi.tmLanguage.yaml > syntaxes/moxi.tmLanguage.json
 ---
 $schema: "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json"
 
-name: mcil
-scopeName: source.mcil
-fileTypes: [mcil]
+name: moxi
+scopeName: source.moxi
+fileTypes: [moxi]
 
 patterns:
 - include: '#command'
@@ -24,39 +24,39 @@ repository:
     patterns:
     - match: '\b(set-logic|declare-sort|define-sort|declare-fun|define-fun|declare-const|define-const|declare-datatype|assert)\b'
       captures:
-        '1': {name: keyword.other.mcil}
+        '1': {name: keyword.other.moxi}
     - match: '\b(define-system|check-system|declare-enum-sort)\b'
       captures:
-        '1': {name: keyword.other.mcil}
+        '1': {name: keyword.other.moxi}
 
-    - comment: mcil functions
+    - comment: moxi functions
     - match: '\b(Deadlock|OnlyChange)\b'
       captures:
-        '1': {name: support.function.mcil}
+        '1': {name: support.function.moxi}
 
 
     - comment: Propositional and =
     - match: '(\b(true|false|and|or|ite|not)\b)|((=>|=)\s)'
       captures:
-        '1': {name: keyword.control.mcil}
+        '1': {name: keyword.control.moxi}
 
     - comment: Arithmetic
     - match: '[[<=][>=]<>\+\-\*/]\s'
       captures:
-        '1': {name: keyword.control.mcil}
+        '1': {name: keyword.control.moxi}
 
   keyword:
     match: ':\b([a-zA-Z~!@$%^&*_\-+=<>.?/]|[a-zA-Z~!@$%^&*_\-+=<>.?/][a-zA-Z0-9~!@$%^&*_\-+=<>.?/]+)\b'
     captures:
-      '1': {name: keyword.control.mcil}
+      '1': {name: keyword.control.moxi}
   sort:
     patterns:
     - match: '\b([A-Z][a-zA-Z~!@$%^&*_\-+=<>.?/]|[A-Z][a-zA-Z0-9~!@$%^&*_\-+=<>.?/]*)\b'
       captures:
-        '1': {name: support.type.mcil}
+        '1': {name: support.type.moxi}
     - match: '\|\b([A-Z][a-zA-Z~!@$%^&*_\-+=<>.?/]|[A-Z][a-zA-Z0-9~!@$%^&*_\-+=<>.?/]*)\b\|'
       captures:
-        '1': {name: support.type.mcil}
+        '1': {name: support.type.moxi}
 
   spec_constant:
     patterns:
@@ -71,38 +71,38 @@ repository:
     patterns:
     - match: '\b([a-zA-Z~!@$%^&*_\-+=<>.?/]|[a-zA-Z~!@$%^&*_\-+=<>.?/][a-zA-Z0-9~!@$%^&*_\-+=<>.?/]+)\b'
       captures:
-        '1': {name: variable.other.mcil}
+        '1': {name: variable.other.moxi}
     - begin: '\|'
       end: '\|'
-      contentName: variable.other.mcil
+      contentName: variable.other.moxi
   
   comment:
     match: ';.*'
-    name: comment.mcil
+    name: comment.moxi
   decimal:
     match: '\b(\d+\.\d+)\b'
     captures:
-      '1': {name: constant.numeric.mcil}
+      '1': {name: constant.numeric.moxi}
   numeral:
     match: '\b(\d+)\b'
     captures:
-      '1': {name: constant.numeric.mcil}
+      '1': {name: constant.numeric.moxi}
   hexadecimal:
     match: '\s(#x\h+)\b'
     captures:
-      '1': {name: constant.numeric.mcil}
+      '1': {name: constant.numeric.moxi}
   binary:
     match: '\s(#b[01]+)\b'
     captures:
-      '1': {name: constant.numeric.mcil}
+      '1': {name: constant.numeric.moxi}
   string:
     begin: '"'
     end: '"'
-    name: string.quoted.double.mcil
+    name: string.quoted.double.moxi
     patterns:
     - match: '""'
-      name: constant.character.escape.mcil
+      name: constant.character.escape.moxi
   b_value:
     match: '\b(true|false)\b'
     captures:
-      '1': {name: constant.language.mcil}
+      '1': {name: constant.language.moxi}

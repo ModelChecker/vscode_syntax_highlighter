@@ -4,7 +4,7 @@ VS Code can only load json grammars, so yaml based grammars must be converted to
 $ npm install js-yaml --save-dev
 
 # Use the command-line tool to convert the yaml grammar to json
-$ npx js-yaml syntaxes/mcil.tmLanguage.yaml > syntaxes/mcil.tmLanguage.json
+$ npx js-yaml syntaxes/moxi.tmLanguage.yaml > syntaxes/moxi.tmLanguage.json
 
 # Build and publish with vsce
 https://codevsce package.visualstudio.com/api/working-with-extensions/publishing-extension

@@ -1,7 +1,7 @@
 {
-  "name": "mcil",
-  "displayName": "mcil",
-  "description": "Syntax highlighter for the Model Checking Intermediate Language",
+  "name": "moxi",
+  "displayName": "moxi",
+  "description": "Syntax highlighter for the Model eXchange Interlingua",
   "license": "MIT",
   "version": "0.0.1",
   "preview": true,
@@ -18,22 +18,22 @@
   "contributes": {
     "languages": [
       {
-        "id": "mcil",
+        "id": "moxi",
         "aliases": [
-          "mcil",
-          "mcil"
+          "moxi",
+          "moxi"
         ],
         "extensions": [
-          "mcil"
+          "moxi"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "mcil",
-        "scopeName": "source.mcil",
-        "path": "./syntaxes/mcil.tmLanguage.json"
+        "language": "moxi",
+        "scopeName": "source.moxi",
+        "path": "./syntaxes/moxi.tmLanguage.json"
       }
     ]
   },
